@@ -32,7 +32,6 @@ public class Goal : MonoBehaviour
             {
                 cleared = true;
                 StartCoroutine(waiter());
-                SceneManager.LoadScene("Title");
             }
         }
     }
@@ -40,6 +39,7 @@ public class Goal : MonoBehaviour
     IEnumerator waiter()
     {
         yield return new WaitForSeconds(2.0F);
+        SceneManager.LoadScene("Title");
         Debug.Log("2 seconds");
     }
 
