@@ -126,3 +126,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 982138109652797057, guid: 8b56075d075a34272906bd0c9874e7d0, type: 3}
+  colorName: Blue

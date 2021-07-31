@@ -5,6 +5,7 @@ using UnityEngine;
 public class Box : MonoBehaviour
 {
     public GameObject explosionPrefab;
+    public string colorName;
 
     private bool damaged;
     private float killTimer;
@@ -18,13 +19,12 @@ public class Box : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!damaged)
-        {
-            return;
-        }
+        if (!damaged) return;
         killTimer -= Time.deltaTime;
         if (killTimer <= 0.0)
         {
+            GameObject gameController = GameObject.FindWithTag("GameController");
+            gameController.SendMessage("OnDestroyBox", colorName);
             Instantiate(explosionPrefab, transform.position, transform.rotation);
             Destroy(gameObject);
         }
