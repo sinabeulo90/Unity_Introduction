@@ -35,4 +35,14 @@ public class BoxGenerator : MonoBehaviour
             nextIsRed = !nextIsRed;
         }
     }
+
+    void TimeUp()
+    {
+        enabled = false;
+    }
+
+    void StartGame()
+    {
+        enabled = true;
+    }
 }

@@ -14,6 +14,8 @@ public class Referee : MonoBehaviour
     private bool targetIsRed;
     private float switchTimer;
 
+    public GUISkin skin;
+
     private string GetTargetColorName()
     {
         return targetIsRed ? "Red" : "Blue";
@@ -52,11 +54,22 @@ public class Referee : MonoBehaviour
 
     private void OnGUI()
     {
+        GUI.skin = skin;
         if (switchTimer < 1.5) return;
         int sw = Screen.width;
         int sh = Screen.height;
         string message = "Shoot " + GetTargetColorName() + " Boxes";
         GUI.color = targetIsRed ? Color.red : Color.blue;
-        GUI.Label(new Rect(0, sh / 4, sw, sh / 2), message);
+        GUI.Label(new Rect(0, sh / 4, sw, sh / 2), message, "message");
+    }
+
+    void TimeUp()
+    {
+        enabled = false;
+    }
+
+    void StartGame()
+    {
+        enabled = true;
     }
 }

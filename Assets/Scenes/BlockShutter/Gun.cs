@@ -29,4 +29,9 @@ public class Gun : MonoBehaviour
             bullet.GetComponent<Rigidbody>().velocity = direction * initialVelocity;
         }
     }
+
+    void TimeUp()
+    {
+        enabled = false;
+    }
 }
