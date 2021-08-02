@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Maze/Main.unity
     guid: 2b24b382a7afe4538925fd6f24dc9ec3
   - enabled: 1
+    path: Assets/Scenes/BlockShutter/Title.unity
+    guid: 8a45c989631bd48e5a3d1943319dc3f0
+  - enabled: 1
     path: Assets/Scenes/BlockShutter/Main.unity
     guid: b9151bb11c0ba4250885cdef65e8b24c
   m_configObjects: {}

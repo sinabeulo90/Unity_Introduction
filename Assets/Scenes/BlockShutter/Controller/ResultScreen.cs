@@ -41,7 +41,7 @@ public class ResultScreen : MonoBehaviour
         state = "Show Score";
         yield return new WaitUntil(() => Input.GetButtonDown("Fire1"));
 
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("Title");
     }
 
     private void OnGUI()
